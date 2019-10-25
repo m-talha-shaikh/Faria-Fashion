@@ -5,4 +5,511 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
+
+/* =========
+    Contents
+   ========= */
+
+/* ==============
+    1.Font
+    2.Lists
+    3.Images
+    4.Background
+    5.Wrapper
+    6.Header
+    7.Navigation
+    8.Banner
+    9.Shop
+    10.Title
+    11.Delivery
+    12.Gallery
+    13.Footer
+    14.Form
+    15.Media Queries 
+    ================= */
+
+/* ======
+    Font 
+   ====== */
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+    font-family: "Roboto";
+}
+
+/* =======
+    Lists
+   ======= */
+ul li {
+    list-style : none ;
+}
+
+/* =======
+    Images      
+   ======= */
+
+img {
+    display: block;
+    width: 100%;
+}
+
+/* ==========
+   Background     
+   ========== */
+main,
+.delivery,
+.gallery,
+footer,
+.content {
+    background: rgb(233, 227, 227) ;
+}
+
+/* ========
+    Wrapper      
+   ======== */
+
+.wrapper {
+    width: 100% ;
+}
+
+/* ========
+    Header     
+   ======== */
+header {
+    position: sticky ;
+    top :0px;
+    background: rgb(233, 227, 227);
+    display: grid ;
+    grid-template-columns: 1fr 1fr;
+    width: 100% ;
+    z-index: 100;
+}
+
+header h2 {
+    font-size: 30px;
+    align-self: center;
+    justify-self: end;
+    color: rgb(214, 81, 103); ;
+    font-weight: bolder;
+}
+
+/* ============
+     Navigation     
+   ============  */
+
+nav {
+    display: none ;
+}
+
+
+/* Nav Lists*/
+
+nav ul li,
+.icons li {
+    display: inline-block ;
+    padding: 20px 10px ;
+    font-size: 18px;
+}
+
+/* Nav Icons */
+
+.icons {
+    justify-self: end;
+    align-self: center;
+}
+
+/* ========
+    Banner
+   ========= */
+
+.banner {
+    background-image: url(../Images/banner_img.png);
+    background-position-x: 70%;
+}
+
+.banner p {
+    font-weight: normal;
+    font-size: 30px;
+    padding: 140px 0 0 10px ;
+    color: rgb(98, 16, 175) ;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+}
+
+.banner h1{
+    font-size: 35px;
+    padding: 20px 0 200px 10px ;
+    color: rgb(214, 81, 103); ;
+    font-weight: bolder;
+}
+
+/* ========
+      Shop
+   ========= */
+
+.shop div {
+    height : 400px ;
+    object-fit: fill;
+    width : 90% ;
+}
+
+.male,
+.female,
+.shoes {
+    margin: 15px ;
+    background-repeat: no-repeat;
+    background-position: 100% ;
+    background-size: contain;
+    background-size:100% ;
+    position: relative ;
+    transition: background-size 200ms ease-in-out;
+    display: grid ;
+    place-items: center;
+}
+
+.shop div::before {
+    content: "";
+    width: 100%;
+    height: 100% ;
+    background: rgba(103, 130, 206, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 1s ease-in-out 200ms;
+    z-index: 98;
+}
+
+.shop div:hover::before {
+    transform:scaleY(1);
+}
+
+.shop div:hover {
+    background-size: 110% ;
+}
+
+.male {
+    background-image: url(../Images/male_img.png);
+}
+
+.female {
+    background-image: url(../Images/female_img.png);
+}
+
+.shoes {
+        background-image: url(../Images/shoes_img.png);
+}
+
+.shop div p {
+    padding : 10px 20px ;
+    background: white;
+    width: 50% ;
+    margin: 0 auto ;
+    text-align: center;
+    color: black;
+    z-index: 99;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 500ms ease-in 200ms;
+}
+
+.shop div:hover p{
+    transform: scaleX(1);
+}
+
+/* ========
+    Title
+   ========= */
+
+.title h3 {
+    font-weight: bolder;
+    font-size: 30px;
+    display: flex ;
+    justify-content: center;
+    padding : 10px 0 5px 0 ;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+}
+
+.select {
+    margin-left: 10px;
+    display: flex ;
+    justify-content: center;
+}
+
+.select li {
+    display: inline-block ;
+    padding : 15px 15px ;
+    font-weight: 100;
+    position: relative;
+}
+
+.select li::before {
+    content : " " ;
+    position: absolute ;
+    left : 0 ;
+    bottom: 11px ;
+    width: 100% ;
+    height: 2px ;
+    background : rgb(83, 124, 235) ;
+    transform: scaleX(0.2);
+    transition: transform 100ms ease-in;
+}
+
+.select li:hover::before {
+    transform: scaleX(0.7);
+}
+
+
+
+/* =========
+    Delivery
+   ========= */
+
+.delivery_box_1 img{
+    display: block ;
+    width: 42px;
+    height : auto ;
+    margin : 10px auto ;
+}
+
+.delivery_box_2 img {  
+    display: block ;
+    width: 41px;
+    height : 38px ;
+    margin : 10px auto ;
+}
+
+.delivery_box_3 img {
+    display: block ;
+    width: 39px;
+    height : 39px ;
+    margin : 10px auto ;
+}
+.delivery div h2 {
+    font-size: 18px;
+    padding: 10px ;
+    text-align: center;
+}
+
+
+/* =========
+    Gallery
+   ========= */
+.gallery {
+    display: flex ;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.insta{
+    display: block ;
+    position: relative;
+    width: 118px ;
+    height: 118px ;
+    margin: 5px 0 ;
+    z-index: 50 ;
+}
+
+.insta::after {
+    content: "";
+    width: 100%;
+    height: 100% ;
+    background: rgba(56, 92, 192, 0.692);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 98;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 250ms ease-in ;
+}
+
+.insta:hover::after {
+    transform: scaleX(1);
+}
+
+.insta div {
+    color: white ;
+    font-size: 30px;
+    text-align: center;
+    position: absolute ;
+    top: 42% ;
+    left: 42% ;
+    transform: scaleX(0);
+    transition: transform 100ms ease;
+    z-index : 99 ;
+}
+
+.insta:hover div {
+    transform: scaleX(1);
+}
+
+
+/* ========
+    Footer
+   ========= */
+
+footer {
+    width: 100% ;
+    color: white ;
+    background-color: black;
+    padding-bottom: 20px;
+}
+
+
+footer h4 {
+    font-size: 20px;
+    padding: 10px 0 ;
+    font-weight: normal;
+}
+
+footer li {
+    padding : 6px 0 6px 10px ;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+#blue {
+    color: blue ;
+}
+
+.footer-social h4 {
+    text-transform: uppercase;
+    font-size: 22px;
+    padding: 6px ;
+}
+
+/* ========
+      Form
+   ========= */
+
+form {
+    display: flex ;
+    justify-content: stretch;
+    height: 50px ;
+    border: 1px solid rgb(48, 120, 180) ;
+    width: 90% ;
+    margin: 10px auto ;
+}
+
+form input,
+form button {
+    text-decoration: none;
+    margin: 0 ;
+    border: none ;
+
+}
+
+form input {
+    color: grey ;
+    background: black ;
+    width: 70% ;
+}
+
+form button {
+    width: 30% ;
+    background:rgb(48, 120, 180) ;
+    color: white ;
+}
+
+/* ============
+    Media Queries
+   ============ */
+
+@media all and (min-width: 600px) and (max-width:767px) {
+    .shop {
+        display: grid ;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .banner p {
+        font-size: 45px;
+    }
+
+    .banner h1 {
+        font-size: 50px;
+    }
+
+    .insta {
+        width: 200px ;
+        height: 200px ;
+    }
+
+    .shop,
+    .delivery {
+        display: grid ;
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    footer {
+        display : grid ;
+        grid-template-columns: 2fr 3fr 1fr;
+        grid-template-areas: ". footer .";
+        }
+
+    footer section {
+        grid-area: footer ;
+    }
+
+    form  {
+        margin-left: 0 ;
+    }
+
+}
+
+@media all and (min-width:768px) {
+    /* Header */
+    header {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    header h2 {
+        font-size: 40px ;
+        justify-self: center ;
+    }
+
+
+    /* Banner */
+    .banner p {
+        font-size: 55px;
+    }
+
+    .banner h1 {
+        font-size: 60px;
+
+    }
+    /* Nav */
+    nav {
+        display: inline-block ;
+    }
+
+    /*  Shop & Delivery */
+    .shop,
+    .delivery {
+        display: grid ;
+        grid-template-columns: repeat(3,1fr);
+    }
+    
+    /* Gallery */
+    .gallery {
+        display: grid ;
+        grid-template-columns: repeat(5,1fr);
+    }
+    .insta {
+        width: 100% !important ;
+        height: auto ;
+    }
+
+    /* Footer */
+    footer section {
+        display: grid ;
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
